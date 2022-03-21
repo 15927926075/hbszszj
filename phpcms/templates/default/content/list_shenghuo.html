@@ -1,0 +1,59 @@
+{template "content","header"}
+<div class="kapian centerBox">
+    <div class="kpzuo left">
+        <h2>{$CATEGORYS[$top_parentid]['catname']}<img src="images/xj_06.png"></h2>
+        <ul class="yiji">
+ {pc:content action="category" catid="$top_parentid" num="" siteid="$siteid" order="listorder ASC"}
+{loop $data $r}
+            <li class="yi{if $catid==$r[catid]} on{/if}">
+                {if $r[child]}<a href="javascript:;">{else}<a href="{$r[url]}">{/if}
+                {$r[catname]}</a>
+                <ul class="erji">
+ {pc:content action="category" catid="$r[catid]" num="" siteid="$siteid" order="listorder ASC"}
+{loop $data $c}
+                    <li><a href="{$c[url]}">{$c[catname]}</a></li>
+{/loop}
+{/pc}             
+                </ul>
+            </li>
+{/loop}
+{/pc}
+        </ul>
+            <img src="{$CATEGORYS[42]['image']}" class="ma">
+    </div>
+    <div class="kpyou">
+        <div class="lop">当前位置：<span><a href="{APP_PATH}">{$CATEGORYS[1]['catname']}</a></span> - <span>{$CATEGORYS[$top_parentid]['catname']}</span> - {$CATEGORYS[$catid]['catname']}</div>
+        <ul class="lie" id="dn">
+ {pc:content action="lists" catid="$catid" order="listorder desc" num="9" moreinfo="1" page=$page } 
+{loop $data $r}
+            <li><a href="{$r[url]}"><img src="{$r[thumb]}"><div class="kphe"><h3>{$r[title]}</h3><p>{$r[description]}</p></div></a></li>
+{/loop}
+{/pc}
+        </ul>
+        <ul class="lie" id="sj">
+ {pc:content action="lists" catid="$catid" order="listorder desc" num="8" moreinfo="1" page=$page } 
+{loop $data $r}
+            <li><a href="{$r[url]}"><img src="{$r[thumb]}"><div class="kphe"><h3>{$r[title]}</h3><p>{$r[description]}</p></div></a></li>
+{/loop}
+{/pc}
+        </ul>
+        <div  id="pages">{$pages}</div>
+    </div>
+</div>
+{template "content","footer"}
+<script>
+$(function(){
+   $('.kpzuo h2').click(function(){
+   $('.kpzuo .yiji').slideToggle();                    
+})
+ })
+$(".yiji .yi").click(function() {
+    var $this = $(this);
+    if($this.hasClass("bg")){
+        $this.removeClass("bg").find('.erji').slideToggle();
+    }else{
+        $this.addClass("bg").find('.erji').slideToggle();
+        $this.siblings().removeClass("bg").find('.erji').slideUp();
+    }
+})
+    </script>

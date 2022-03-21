@@ -1,0 +1,19 @@
+<?php
+
+return array (
+	'default' => array (
+		'hostname' => '9pnp5xz1.2384.dnstoo.com:5511',
+		'port' => 3306,
+		'database' => 'ka0ypg',
+		'username' => 'ka0ypg_f',
+		'password' => 'Z5qO0BynfkYynDWk',
+		'tablepre' => 'maocai_',
+		'charset' => 'utf8',
+		'type' => 'mysqli',
+		'debug' => true,
+		'pconnect' => 0,
+		'autoconnect' => 0
+		),
+);
+
+?>

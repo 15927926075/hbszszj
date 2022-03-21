@@ -1,0 +1,255 @@
+{template "content","header"}
+
+<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+
+<script type="text/javascript" src="js/wow.min.js"></script>
+
+<div class="index centerBox">
+
+    <div class="izuo wow slideInLeft">
+
+        <h2>最新新闻<span>News</span></h2>
+
+        <ul>
+
+{pc:get sql="SELECT * from huawai_news where  catid in(61,25,38,24,22,28,23,27,59,30,33,36,37) order by id desc" num="3" return="data"}
+{loop $data $r} 
+	<li><a href="{$r[url]}"><div class="riqi"><h3>{date('d',$r[inputtime])}</h3><p>{date('Y-m',$r[inputtime])}</p></div><div class="zcen"><h4>{$r[title]}</h4>		<p class="yin"><img src="images/sj_18.jpg">{date('H:i',$r[inputtime])}</p><p>{$r[description]}</p></div><img src="{$r[thumb]}" class="thumb"></a></li>
+{/loop}
+{/pc}
+
+        </ul>
+
+    </div>
+
+    <div class="iyou wow slideInRight">
+
+       <h2>{$CATEGORYS[50]['catname']}<span>{$CATEGORYS[50]['catdir']}</span></h2> 
+
+       <ul>
+
+  {pc:content action="lists" catid="50" order="listorder desc" num="1" moreinfo="1"  } 
+
+{loop $data $r} 
+
+           <li><a href="{$r[url]}"><img src="images/zj_06.png"><p>{$r[title]}<span>NEW</span></p></a></li>
+
+{/loop}
+
+{/pc}
+
+  {pc:content action="lists" catid="50" order="listorder desc" num="4" moreinfo="1" start=1 } 
+
+{loop $data $r} 
+
+           <li><a href="{$r[url]}"><img src="images/zj_06.png"><p>{$r[title]}</p></a></li>
+
+ {/loop}
+
+{/pc}
+
+       </ul>
+
+       <a href="{$CATEGORYS[50]['url']}" class="cha">查看更多</a>
+
+    </div>
+
+    <div class="clearBoth"></div>
+
+</div>
+
+<div class="serive wow slideInUp">
+
+    <h2>{$CATEGORYS[51]['catname']}</h2>
+
+    <h4>{$CATEGORYS[51]['catdir']}</h4>
+
+    <ul class="centerBox">
+
+   {pc:content action="lists" catid="51" order="listorder desc" num="3" moreinfo="1"} 
+
+{loop $data $r}        
+
+        <li><a href="{$r[url]}" target="_blank"><img src="{$r[thumb]}"><p>{$r[title]}</p></a></li>
+
+  {/loop}
+
+{/pc}
+
+    </ul>
+
+</div>
+
+<div class="jianzhang centerBox">
+
+    <div class="jzzuo left wow slideInLeft">
+
+        <img src="{$CATEGORYS[53]['image']}">
+
+    </div>
+
+    <div class="jzyou right wow slideInRight">
+
+        <h2>{$CATEGORYS[53]['catname']}</h2>
+
+        <h3>{$CATEGORYS[53]['catdir']}</h3>
+
+        <p>{$CATEGORYS[52]['description']}</p>
+
+        <div>
+
+            {$CATEGORYS[53]['description']}
+
+        </div>
+
+        <a href="{$CATEGORYS[53]['url']}">阅读详细  ></a>
+
+    </div>
+
+</div>
+
+<div class="fengg wow slideInUp">
+
+    <div class="centerBox">
+
+        <h2>{$CATEGORYS[54]['catname']}</h2>
+
+        <h3>{$CATEGORYS[54]['catdir']}</h3>
+
+<!-- Swiper -->
+
+<div class="fzong" style="display: flex;flex-wrap: wrap;">
+
+  <div class="swiper-container lunbo">
+
+    <div class="swiper-wrapper">
+
+   {pc:content action="lists" catid="54" order="listorder desc" num="" moreinfo="1"} 
+
+{loop $data $r} 
+
+      <div class="swiper-slide"><a href="{$r[url]}"><img src="{$r[thumb]}"><p>{$r[title]}</p></a></div>
+
+  {/loop}
+
+{/pc}
+
+
+
+    </div>
+
+  </div>
+
+<div class="ckgd"><div><a href="{$CATEGORYS[54]['url']}"><h2>MORE</h2><h3>查看更多</h3></a></div></div>
+
+</div>
+
+    </div>
+
+    <div class="swiper-button-prev zuo"><img src="images/bz_21.png" onmouseover="this.src='images/hz.png'" onmouseout="this.src='images/bz_21.png'" /></div>
+
+    <div class="swiper-button-next you"><img src="images/by.png" onmouseover="this.src='images/hz_21.png'" onmouseout="this.src='images/by.png'" /></div>
+
+</div>
+
+  <!-- Initialize Swiper -->
+
+  <script>
+
+   var width_ = $(window).width();
+
+    if(width_>1024){
+
+    var swiper = new Swiper('.lunbo', {
+
+      slidesPerView: 3,
+
+      spaceBetween: 28,
+
+      loop:true,
+
+      navigation: {
+
+        nextEl: '.you',
+
+        prevEl: '.zuo',
+
+      },
+
+    });
+
+}else{
+
+     var swiper = new Swiper('.lunbo', {
+
+      slidesPerView: 2,
+
+      spaceBetween: 10,
+
+      loop:true,
+
+      navigation: {
+
+        nextEl: '.you',
+
+        prevEl: '.zuo',
+
+      },
+
+    });   
+
+}
+
+  </script>
+
+<!-- <script>
+
+var www=$(".lunbo").height();
+
+$('.ckgd').css("height",www);
+
+</script> -->
+
+<script type="text/javascript">
+
+
+
+　　　var wow = new WOW({
+
+
+
+    boxClass: 'wow',
+
+
+
+    animateClass: 'animated',
+
+
+
+    offset: 0,
+
+
+
+    mobile: true,
+
+
+
+    live: true
+
+
+
+  });
+
+
+
+  wow.init();
+
+
+
+
+
+
+
+</script>
+
+{template "content","footer"}

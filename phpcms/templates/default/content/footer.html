@@ -1,0 +1,56 @@
+<div class="footer">
+	<div class="centerBox">
+		<div class="weixin"><img src="{$CATEGORYS[42]['image']}"><p>{$CATEGORYS[42]['catname']}</p></div>
+		<div class="fxinxi">
+			{pc:get sql="SELECT * FROM huawai_page where catid=43"}
+			{loop $data $val}
+			{$val[content]}
+			{/loop}
+			{/pc}
+			<a href="#top">- 回到顶部 -</a>
+		</div>
+	</div>
+</div>
+<div class="copy">
+	<div class="centerBox">{$CATEGORYS[44]['description']}</div>
+</div>
+<script>
+window.onload = function() {
+    var hei=$(window).height();
+    var aa=$(".kpyou").height();
+    var cc=$(".header").height();
+    var ddd= hei - cc;
+    $('.kpzuo').css("min-height",aa);
+    $('.sjmenu ul').css("height",ddd);
+    $('.sjmenu ul').css("top",cc);
+    var width_ = $(window).width();
+    if(width_<=1024){
+    $('.hei').css("margin-top",cc);
+}
+};
+</script>
+<script>
+$(function(){
+   $('.cai').click(function(){
+   $('.sjmenu ul').slideToggle();                    
+})
+ })
+</script>
+<script>
+    $(document).ready(function(){
+        //首先将#back-to-top隐藏
+        $(".fixed").hide();
+        //当滚动条的位置处于距顶部600像素以下时，跳转链接出现，否则消失
+        $(function () {
+            $(window).scroll(function(){
+                if ($(window).scrollTop()>600){
+                    $(".fixed").fadeIn(500);
+                }else{
+                    $(".fixed").fadeOut(500);
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

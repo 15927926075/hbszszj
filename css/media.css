@@ -1,0 +1,616 @@
+@media only screen and (max-width: 1680px) {
+    .tou {
+        width: 98%;
+        padding: 1.4% 0 1.4% 2%;
+    }
+    .pcmenu ul li {
+        margin-left: 0;
+        font-size: 18px;
+        margin: 0 4px;
+    }
+    .iyou ul li p {
+        width: 87%;
+    }
+    .zcen {
+        margin-left: 4.8%;
+    }
+    .fengg .zuo {
+        left: 40%
+    }
+    .fengg .you {
+        right: 40%;
+    }
+}
+
+@media only screen and (max-width: 1600px) {}
+
+@media only screen and (max-width: 1440px) {}
+
+@media only screen and (max-width: 1366px) {
+    .pcmenu {
+        float: left;
+        /*clear: both;overflow: hidden;*/
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .weixin {
+        padding-left: 10%;
+    }
+    .fxinxi {
+        margin-left: 13%;
+    }
+    .weixin img {
+        width: 200px;
+    }
+    .banner .dian {
+        right: 10% !important;
+    }
+    .banner {
+        height: 500px;
+    }
+    .zcen {
+        width: 47%;
+    }
+}
+
+@media only screen and (max-width: 1152px) {
+    .kpzuo {
+        padding: 4% 1.8% 0;
+    }
+    .weixin {
+        padding-left: 0;
+    }
+    .fxinxi {
+        float: right;
+        margin-left: 0;
+    }
+    .index .izuo {
+        float: none;
+        width: 100%;
+    }
+    .iyou {
+        width: 100%;
+        float: none;
+    }
+    .zcen {
+        width: 57%;
+    }
+    .index {
+        margin-top: 8% !important;
+        padding-bottom: 10%;
+    }
+    .serive {
+        padding: 6% 0 10%;
+    }
+    .serive ul li img {
+        width: 42%;
+    }
+    .serive ul {
+        margin-top: 8%;
+    }
+    .jianzhang {
+        padding: 10% 0 10%;
+    }
+    .fengg {
+        padding: 10% 0 19%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .kpzuo {
+        float: none;
+        width: 100%;
+        min-height: auto !important;
+    }
+    .kpzuo .ma {
+        display: none;
+    }
+    .kpyou {
+        float: none;
+        width: 100%;
+        padding: 4% 3% 0;
+        margin-bottom: 4%;
+    }
+    .kpzuo {
+        background: #f3f4f5;
+        background-image: none;
+    }
+    .show .title {
+        margin-top: 3%;
+    }
+    .page {
+        margin-top: 3.8%;
+        font-size: 18px;
+    }
+    .show {
+        padding-bottom: 6%;
+    }
+    .kpzuo .yiji {
+        display: none;
+    }
+    .pcmenu {
+        display: none;
+    }
+    .cai {
+        display: block;
+        float: right;
+        padding-top: 15px;
+    }
+    .sjmenu ul {
+        position: fixed;
+        right: 0;
+        width: 50%;
+        background: rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        overflow-y: auto;
+    }
+    .sjmenu ul li {
+        line-height: 70px;
+        font-size: 20px;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
+    .tou {
+        width: 93%;
+        padding: 1.4% 0;
+        margin: auto;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        left: 0;
+        background: #ffffff;
+        z-index: 999;
+    }
+    .weixin {
+        width: 100%;
+    }
+    .weixin img {
+        margin: auto;
+    }
+    .weixin p {
+        text-align: center;
+    }
+    .fxinxi {
+        width: 100%;
+        margin-top: 4%;
+    }
+    .footer {
+        padding: 10% 0 4%;
+    }
+    .ul li {
+        padding: 4.6% 0;
+    }
+    .ul li .kphe h3 {
+        font-size: 24px;
+    }
+    .ul li .sj {
+        margin-top: 3%;
+        font-size: 18px;
+    }
+    .ul li p {
+        margin-top: 2%;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    .fixed {
+        display: none !important;
+    }
+    .lunbo {
+        width: 68%;
+    }
+    .ckgd {
+        width: 30.2%;
+    }
+    .zuo img {
+        width: 45px;
+    }
+    .you img {
+        width: 45px;
+    }
+    .lunbo .swiper-slide p {
+        font-size: 20px;
+        line-height: 50px;
+    }
+    .ckgd h2 {
+        font-size: 40px;
+    }
+    .ckgd h3 {
+        font-size: 20px;
+    }
+    .fengg h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .fengg h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .jzyou h2 {
+        font-size: 30px;
+    }
+    .jzyou h3 {
+        font-size: 20px;
+    }
+    .serive h2 {
+        font-size: 30px;
+    }
+    .serive h4 {
+        font-size: 20px;
+    }
+    .iyou h2 {
+        font-size: 30px;
+    }
+    .iyou h2 span {
+        font-size: 20px;
+    }
+    .izuo h2 {
+        font-size: 30px;
+    }
+    .izuo h2 span {
+        font-size: 20px;
+    }
+    .jianzhang .jzzuo {
+        float: none;
+        width: 100%;
+    }
+    .jzyou {
+        float: none;
+        width: 100%;
+        margin-top: 4%;
+    }
+    .serive ul li p {
+        margin-top: 4%;
+        font-size: 18px;
+    }
+    .zcen {
+        margin-left: 3.8%;
+    }
+    .zcen {
+        width: 52%;
+    }
+    .top .search {
+        float: left;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .sjmenu ul li {
+        line-height: 60px;
+        font-size: 18px;
+    }
+    .ul li .kphe h3 {
+        font-size: 22px;
+    }
+    .ul li .img {
+        width: 45%;
+    }
+    .ul li .kphe {
+        width: 50%;
+    }
+    .show .time {
+        margin-top: 2%;
+        font-size: 16px;
+    }
+    .content {
+        margin-top: 3.8%;
+        font-size: 16px;
+    }
+    .content .more {
+        margin: 5% auto 0;
+    }
+    .fanye {
+        margin-top: 7%;
+    }
+    .fanye p {
+        font-size: 16px;
+    }
+    .kpyou .lie li {
+        width: 48%;
+        margin-right: 4%;
+        margin-top: 4%;
+        margin-bottom: 2%;
+    }
+    .kpyou .lie li:nth-child(even) {
+        margin-right: 0 !important;
+    }
+    .kpyou .lie li:nth-child(3n) {
+        margin-right: 4%;
+    }
+    .kapian {
+        padding-bottom: 10%;
+    }
+    .kpyou .lie {
+        padding-bottom: 7%;
+    }
+    #sj {
+        display: block;
+    }
+    #dn {
+        display: none;
+    }
+    .izuo h4 {
+        font-size: 16px;
+    }
+    .izuo ul li .zcen p {
+        font-size: 14px;
+    }
+    .riqi h3 {
+        font-size: 40px;
+    }
+    .izuo ul li .riqi {
+        width: 84px;
+        height: 84px;
+    }
+    .izuo li .thumb {
+        width: 35.5%;
+        height: 100px;
+    }
+    .zcen {
+        width: 44%;
+    }
+    .iyou ul li {
+        margin-top: 4%;
+    }
+    .iyou .cha {
+        margin: 4% auto 0;
+    }
+    .jzyou p {
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .banner {
+        height: 240px;
+    }
+    .search .key {
+        width: 150px;
+        padding-left: 30px;
+        font-size: 14px;
+    }
+    .top a {
+        margin-left: 16px;
+    }
+    .kpzuo h2 {
+        line-height: 48px;
+        font-size: 18px;
+    }
+    .yiji .yi {
+        line-height: 48px;
+        font-size: 18px;
+        padding-left: 18px;
+        margin-top: 2%;
+    }
+    .kpzuo h2 img {
+        padding-top: 12px;
+    }
+    .kpyou .lop {
+        font-size: 16px;
+    }
+    .show .title {
+        font-size: 22px;
+    }
+    .page {
+        font-size: 16px;
+    }
+    .weixin img {
+        width: 30%;
+    }
+    .weixin p {
+        font-size: 18px;
+        margin-top: 16px;
+    }
+    .fxinxi ul li img {
+        width: 20px;
+    }
+    .fxinxi ul li {
+        margin-bottom: 12px;
+    }
+    .fxinxi a {
+        width: 90px;
+        line-height: 34px;
+        font-size: 14px;
+        margin: auto;
+    }
+    .copy {
+        padding: 4% 0;
+        font-size: 14px;
+    }
+    .ul li .kphe h3 {
+        font-size: 16px;
+    }
+    .ul li p {
+        font-size: 14px;
+    }
+    .ul li .sj {
+        font-size: 14px;
+    }
+    .ul li .kphe img {
+        width: 14px;
+    }
+    .list {
+        padding-bottom: 10%;
+    }
+    .ul {
+        padding-bottom: 6%;
+    }
+    .banner .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+    .zcen {
+        width: 56%;
+        margin-left: 0;
+    }
+    .izuo ul li .riqi {
+        display: none;
+    }
+    .izuo li .thumb {
+        width: 38.5%;
+        height: 100px;
+    }
+    .index .izuo {
+        padding: 4% 3% 0px;
+    }
+    .serive ul li p {
+        font-size: 16px;
+    }
+    .jzyou p {
+        margin-top: 1%;
+    }
+    .jzyou a {
+        margin-top: 4%;
+    }
+    .fengg {
+        padding: 10% 0 28%;
+    }
+    .lunbo .swiper-slide p {
+        font-size: 14px;
+        line-height: 30px;
+    }
+    .fengg h2 {
+        font-size: 28px;
+    }
+    .fengg h3 {
+        font-size: 18px;
+    }
+    .jzyou a {
+        font-size: 16px;
+    }
+    .jzyou div {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .search .key {
+        width: 150px;
+    }
+    .logo {
+        width: 200px;
+    }
+    .cai {
+        width: 30px;
+        padding-top: 8px;
+    }
+    .weixin p {
+        font-size: 16px;
+    }
+    .ul li p {
+        -webkit-line-clamp: 2;
+    }
+    .kpyou .lie li .kphe {
+        padding: 8px;
+    }
+    .kpyou .lie li p {
+        margin-top: 6px;
+    }
+    .ckgd h2 {
+        font-size: 30px;
+    }
+    .ckgd h3 {
+        font-size: 18px;
+    }
+    .fengg h2 {
+        font-size: 20px;
+    }
+    .fengg h3 {
+        font-size: 16px;
+    }
+    .jzyou h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .jzyou h3 {
+        font-size: 16px;
+        text-align: center;
+    }
+    .serive h2 {
+        font-size: 20px;
+    }
+    .serive h4 {
+        font-size: 16px;
+    }
+    .iyou h2 {
+        font-size: 20px;
+    }
+    .iyou h2 span {
+        font-size: 16px;
+    }
+    .izuo h2 {
+        font-size: 20px;
+    }
+    .izuo h2 span {
+        font-size: 16px;
+    }
+    .izuo h2 a {
+        width: 66px;
+        line-height: 26px;
+        font-size: 14px;
+    }
+    .izuo ul li {
+        padding: 4% 0;
+    }
+    .izuo ul li .zcen .yin {
+        display: none;
+    }
+    .iyou {
+        padding: 6% 4% 6%;
+    }
+    .iyou .cha {
+        width: 78px;
+        line-height: 30px;
+        font-size: 16px;
+    }
+    .iyou ul li {
+        font-size: 16px;
+    }
+    .iyou h2 {
+        padding-bottom: 3%;
+    }
+    .serive ul li img {
+        width: 61%;
+    }
+    .serive ul li {
+        padding: 0 2%;
+        box-sizing: border-box;
+    }
+    .serive ul li p {
+        font-size: 14px;
+        margin-top: 6%;
+    }
+    .jzyou a {
+        width: 104px;
+        line-height: 34px;
+    }
+    .lunbo .swiper-slide p {
+        line-height: 38px;
+    }
+    .lunbo {
+        margin-top: 4%;
+    }
+    .ckgd {
+        margin-top: 4%;
+    }
+    .zuo img {
+        width: 36px;
+    }
+    .you img {
+        width: 36px;
+    }
+    .fengg h3 {
+        font-size: 14px;
+    }
+    .fengg {
+        padding: 10% 0 33%;
+    }
+}
+
+@media only screen and (max-width: 375px) {}
+
+@media only screen and (max-width: 325px) {}

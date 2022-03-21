@@ -1,0 +1,38 @@
+{template "content","header"}
+<div class="list centerBox">
+    <div class="kpzuo left">
+        <h2>{$CATEGORYS[$catid]['catname']}<img src="images/xj_06.png"></h2>
+        <ul class="yiji">
+            <li class="yi on"><a href="{$CATEGORYS[$catid]['url']}">{$CATEGORYS[$catid]['catname']}</a></li>
+        </ul>
+            <img src="{$CATEGORYS[42]['image']}" class="ma">
+    </div>
+    <div class="kpyou">
+        <div class="lop">当前位置：<span><a href="{APP_PATH}">{$CATEGORYS[1]['catname']}</a></span> - {$CATEGORYS[$catid]['catname']}</div>
+        <ul class="ul">
+ {pc:content action="lists" catid="$catid" order="listorder desc" num="4" moreinfo="1" page=$page } 
+{loop $data $r}
+            <li><a href="{$r[url]}"><img src="{$r[thumb]}" class="img"><div class="kphe"><h3>{$r[title]}</h3><div class="sj"><img src="images/sj_18.jpg">{date('Y-m-d',$r[inputtime])}</div><p>{$r[description]}</p></div></a></li>
+{/loop}
+{/pc}
+        </ul>
+        <div  id="pages">{$pages}</div>
+    </div>
+</div>
+{template "content","footer"}
+<script>
+$(function(){
+   $('.kpzuo h2').click(function(){
+   $('.kpzuo .yiji').slideToggle();                     
+})
+ })
+$(".yiji .yi").click(function() {
+    var $this = $(this);
+    if($this.hasClass("bg")){
+        $this.removeClass("bg").find('.erji').slideToggle();
+    }else{
+        $this.addClass("bg").find('.erji').slideToggle();
+        $this.siblings().removeClass("bg").find('.erji').slideUp();
+    }
+})
+    </script>

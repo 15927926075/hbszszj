@@ -1,0 +1,56 @@
+{template "content","header"}
+<div class="show centerBox">
+    <div class="kpzuo left">
+        <h2>{$CATEGORYS[$top_parentid]['catname']}<img src="images/xj_06.png"></h2>
+        <ul class="yiji">
+ {pc:content action="category" catid="$top_parentid" num="" siteid="$siteid" order="listorder ASC"}
+{loop $data $r}
+            <li class="yi{if $catid==$r[catid]} on{/if}">
+                {if $r[child]}<a href="javascript:;">{else}<a href="{$r[url]}">{/if}
+                {$r[catname]}</a>
+                <ul class="erji">
+ {pc:content action="category" catid="$r[catid]" num="" siteid="$siteid" order="listorder ASC"}
+{loop $data $c}
+                    <li><a href="{$c[url]}">{$c[catname]}</a></li>
+{/loop}
+{/pc}             
+                </ul>
+            </li>
+{/loop}
+{/pc}
+        </ul>
+            <img src="{$CATEGORYS[42]['image']}" class="ma">
+    </div>
+    <div class="kpyou">
+        <div class="lop">当前位置：<span><a href="{APP_PATH}">{$CATEGORYS[1]['catname']}</a></span> - <span>{$CATEGORYS[$top_parentid]['catname']}</span> - {$CATEGORYS[$catid]['catname']}</div>
+        <h2 class="title">{$title}</h2>
+        <p class="time"><img src="images/sj_18.jpg">{date('Y-m-d',strtotime($inputtime))}</p>
+        <div class="content">
+            <div class="contenta" style="clear: both;overflow: hidden;">
+        	{$content}
+        </div><div class="bshare-custom icon-medium-plus"><a title="分享到" href="http://www.bShare.cn/" id="bshare-shareto" class="bshare-more">分享到</a><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a><span class="BSHARE_COUNT bshare-share-count">0</span></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+        	<!-- <a href="javascript:;" class="more">查看更多</a> -->
+        	<div class="fanye" style="clear: both;overflow: hidden;">
+        		<div>上一篇：</div><p><a href="{$next_page[url]}">{$next_page[title]}</a></p>
+                <div>下一篇：</div><p><a href="{$previous_page[url]}">{$previous_page[title]}</a></p>
+        	</div>
+        </div>
+    </div>
+</div>
+{template "content","footer"}
+<script>
+$(function(){
+   $('.kpzuo h2').click(function(){
+   $('.kpzuo .yiji').slideToggle();                     
+})
+ })
+$(".yiji .yi").click(function() {
+    var $this = $(this);
+    if($this.hasClass("bg")){
+        $this.removeClass("bg").find('.erji').slideToggle();
+    }else{
+        $this.addClass("bg").find('.erji').slideToggle();
+        $this.siblings().removeClass("bg").find('.erji').slideUp();
+    }
+})
+    </script>

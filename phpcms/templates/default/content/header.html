@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="shortcut icon" href="/favicon.ico" />
+<!-- <script language="JavaScript" src="http://code.54kefu.net/kefu/js/b88/1081288.js" type="text/javascript" charset="utf-8"></script> -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<meta name="keywords" content="{$SEO['keyword']}">
+<meta name="description" content="{$SEO['description']}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/commonss.css">
+<link rel="stylesheet" type="text/css" href="css/media.css">
+<link rel="stylesheet" type="text/css" href="js/js/swiper.min.css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script src="js/js/swiper.min.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+	{php if($top_parentid) $idd=$top_parentid; elseif($parentid) $idd=$parentid; else $idd=$catid;}
+<div class="header">
+	<div class="top">
+		<div class="centerBox">
+			<!-- <a href="{$CATEGORYS[14]['url']}">{$CATEGORYS[14]['catname']}</a> -->
+		<!-- 	<a href="{$CATEGORYS[15]['url']}">{$CATEGORYS[15]['catname']}</a> -->
+		<div class="search">
+			<form action="{APP_PATH}index.php" method="get">
+			<input type="hidden" name="m" value="content"/>
+			<input type="hidden" name="c" value="index"/>
+			<input type="hidden" name="a" value="lists"/>
+			<input type="hidden" name="catid" value="13"/>     	
+			<input type="text" name="q" id="q"  placeholder="搜索" class="key"/>
+			<input type="submit" class="submit" value="GO"/>
+			</form>
+		</div>
+	</div>
+	</div>
+	<div class="tou">
+		<div class="logo"><a href="{APP_PATH}"><img src="{$CATEGORYS[11]['image']}"></a></div>
+		<div class="pcmenu">
+			<ul>
+				<li {if $idd==0}class="on"{/if}><a href="{APP_PATH}">{$CATEGORYS[1]['catname']}</a></li>
+				<li {if $idd==2}class="on"{/if}>
+				{pc:content action="category" catid="2" num="1" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+				<a href="{$r[url]}">
+				{/loop}
+				{/pc}
+					{$CATEGORYS[2]['catname']}</a>
+					<ul class="erji">
+                {pc:content action="category" catid="2" num="" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+						<li><a href="{$r[url]}">{$r[catname]}</a></li>
+				{/loop}
+				{/pc}
+					</ul>
+				</li>
+				<li {if $idd==3}class="on"{/if}>
+				{pc:content action="category" catid="3" num="1" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+				<a href="{$r[url]}">
+				{/loop}
+				{/pc}
+					{$CATEGORYS[3]['catname']}</a>
+					<ul class="erji">
+                {pc:content action="category" catid="3" num="" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+						<li><a href="{$r[url]}">{$r[catname]}</a></li>
+				{/loop}
+				{/pc}
+					</ul>
+				</li>
+				<li {if $idd==4}class="on"{/if}>
+				{pc:content action="category" catid="4" num="1" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+				<a href="{$r[url]}">
+				{/loop}
+				{/pc}
+					{$CATEGORYS[4]['catname']}</a>
+					<ul class="erji">
+                {pc:content action="category" catid="4" num="" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+						<li><a href="{$r[url]}">{$r[catname]}</a></li>
+				{/loop}
+				{/pc}
+					</ul>
+				</li>
+				
+				
+				<li {if $idd==5}class="on"{/if}>
+				{pc:content action="category" catid="5" num="1" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+				<a href="{$r[url]}">
+				{/loop}
+				{/pc}
+					{$CATEGORYS[5]['catname']}</a>
+					<ul class="erji">
+                {pc:content action="category" catid="5" num="" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+						<li><a href="{$r[url]}">{$r[catname]}</a></li>
+				{/loop}
+				{/pc}
+					</ul>
+				</li>
+				<li {if $idd==6}class="on"{/if}>
+				{pc:content action="category" catid="6" num="1" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+				<a href="{$r[url]}">
+				{/loop}
+				{/pc}
+					{$CATEGORYS[6]['catname']}</a>
+					<ul class="erji">
+                {pc:content action="category" catid="6" num="" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+						<li><a href="{$r[url]}">{$r[catname]}</a></li>
+				{/loop}
+				{/pc}
+					</ul>
+				</li>
+				<li {if $idd==7}class="on"{/if}>
+					<a href="{$CATEGORYS[7]['url']}">{$CATEGORYS[7]['catname']}</a>
+									<ul class="erji">
+                {pc:content action="category" catid="7" num="" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+						<li><a href="{$r[url]}">{$r[catname]}</a></li>
+				{/loop}
+				{/pc}
+					</ul>
+				</li>
+<!-- 				<li {if $idd==8}class="on"{/if}><a href="{$CATEGORYS[8]['url']}">{$CATEGORYS[8]['catname']}</a></li> -->
+				<li {if $idd==9}class="on"{/if}>
+				{pc:content action="category" catid="9" num="1" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+				<a href="{$r[url]}">
+				{/loop}
+				{/pc}
+					{$CATEGORYS[9]['catname']}</a>
+					<ul class="erji">
+                {pc:content action="category" catid="9" num="" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+						<li><a href="{$r[url]}">{$r[catname]}</a></li>
+				{/loop}
+				{/pc}
+					</ul>
+				</li>
+				<li {if $idd==10}class="on"{/if}>
+				{pc:content action="category" catid="10" num="1" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+				<a href="{$r[url]}">
+				{/loop}
+				{/pc}
+					{$CATEGORYS[10]['catname']}</a>
+					<ul class="erji">
+                {pc:content action="category" catid="10" num="" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+						<li><a href="{$r[url]}">{$r[catname]}</a></li>
+				{/loop}
+				{/pc}
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="sjmenu">
+			<div class="cai"><img src="images/hcai_03.png"></div>
+			<ul>
+				<li><a href="{APP_PATH}">{$CATEGORYS[1]['catname']}</a></li>
+				<li>
+				{pc:content action="category" catid="2" num="1" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+				<a href="{$r[url]}">
+				{/loop}
+				{/pc}
+					{$CATEGORYS[2]['catname']}</a></li>
+				<li>
+				{pc:content action="category" catid="3" num="1" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+				<a href="{$r[url]}">
+				{/loop}
+				{/pc}
+					{$CATEGORYS[3]['catname']}</a></li>
+				<li><a href="{$CATEGORYS[4]['url']}">{$CATEGORYS[4]['catname']}</a></li>
+				<li>
+				{pc:content action="category" catid="5" num="1" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+				<a href="{$r[url]}">
+				{/loop}
+				{/pc}
+					{$CATEGORYS[5]['catname']}</a></li>
+				<li>
+				{pc:content action="category" catid="6" num="1" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+				<a href="{$r[url]}">
+				{/loop}
+				{/pc}
+					{$CATEGORYS[6]['catname']}</a></li>
+				<li><a href="{$CATEGORYS[7]['url']}">{$CATEGORYS[7]['catname']}</a></li>
+				<li><a href="{$CATEGORYS[8]['url']}">{$CATEGORYS[8]['catname']}</a></li>
+				<li>
+				{pc:content action="category" catid="9" num="1" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+				<a href="{$r[url]}">
+				{/loop}
+				{/pc}
+					{$CATEGORYS[9]['catname']}</a></li>
+				<li>
+				{pc:content action="category" catid="10" num="1" siteid="$siteid" order="listorder ASC"}
+				{loop $data $r}
+				<a href="{$r[url]}">
+				{/loop}
+				{/pc}
+					{$CATEGORYS[10]['catname']}</a></li>
+			</ul>
+		</div>
+		<div class="clearBoth"></div>
+	</div>
+	<div class="clearBoth"></div>
+</div>
+<div class="hei"></div>
+<div class="fixed">
+	<ul>
+		<li><a href="{APP_PATH}"><img src="images/s1.png" onmouseover="this.src='images/q1.png'" onmouseout="this.src='images/s1.png'" /></a></li>
+		<li class="zixun"><a href="{$CATEGORYS[45]['url']}" target="_blank"><img src="images/s2.png" onmouseover="this.src='images/q2.png'" onmouseout="this.src='images/s2.png'" /><p>在线咨询</p></a></li>
+<!-- 		<li><a href="{$CATEGORYS[46]['url']}" target="_blank"><img src="images/s3.png" onmouseover="this.src='images/q3.png'" onmouseout="this.src='images/s3.png'" /></a></li>
+		<li><a href="{$CATEGORYS[47]['url']}" target="_blank"><img src="images/s4.png" onmouseover="this.src='images/q4.png'" onmouseout="this.src='images/s4.png'" /></a></li>
+		<li><a href="{$CATEGORYS[48]['url']}" target="_blank"><img src="images/s5.png" onmouseover="this.src='images/q5.png'" onmouseout="this.src='images/s5.png'" /></a></li> -->
+		<li><a href="#top"><img src="images/s6.png" onmouseover="this.src='images/q6.png'" onmouseout="this.src='images/s6.png'" /></a></li>
+	</ul>
+</div>
+<!-- Swiper -->
+    <div class="swiper-container banner">
+        <div class="swiper-wrapper">
+  {pc:content action="lists" catid="12" order="listorder desc" num="" moreinfo="1"  } 
+{loop $data $r} 
+            <div class="swiper-slide" style="background: url({$r[thumb]})center no-repeat;background-size: cover;"><a href="{$r[url]}" style="display: block;height: 100%;" target="_blank"></a></div>
+{/loop}
+{/pc}        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination dian"></div>
+    </div>
+
+    <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.banner', {
+        // direction: 'vertical',
+        slidesPerView: 1,
+        spaceBetween: 30,
+        autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+        pagination: {
+          el: '.dian',
+          clickable: true,
+        },
+    });
+    </script>

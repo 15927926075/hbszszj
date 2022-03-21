@@ -1,0 +1,42 @@
+{template "content","header"}
+<div class="show centerBox">
+    <div class="kpzuo left">
+        <h2>{$CATEGORYS[$catid]['catname']}<img src="images/xj_06.png"></h2>
+        <ul class="yiji">
+            <li class="yi on"><a href="{$CATEGORYS[$catid]['url']}">{$CATEGORYS[$catid]['catname']}</a></li>
+        </ul>
+            <img src="{$CATEGORYS[42]['image']}" class="ma">
+    </div>
+    <div class="kpyou">
+        <div class="lop">当前位置：<span><a href="{APP_PATH}">{$CATEGORYS[1]['catname']}</a></span> - {$CATEGORYS[$catid]['catname']}</div>
+        <h2 class="title">{$title}</h2>
+        <p class="time"><img src="images/sj_18.jpg">{date('Y-m-d',strtotime($inputtime))}</p>
+        <div class="content">
+            <div class="contenta" style="clear: both;overflow: hidden;">
+        	{$content}
+             </div>
+        	<!-- <a href="javascript:;" class="more">查看更多</a> -->
+        	<div class="fanye" style="clear: both;overflow: hidden;">
+        		<div>上一篇：</div><p><a href="{$next_page[url]}">{$next_page[title]}</a></p>
+                <div>下一篇：</div><p><a href="{$previous_page[url]}">{$previous_page[title]}</a></p>
+        	</div>
+        </div>
+    </div>
+</div>
+{template "content","footer"}
+<script>
+$(function(){
+   $('.kpzuo h2').click(function(){
+   $('.kpzuo .yiji').slideToggle();                   
+})
+ })
+$(".yiji .yi").click(function() {
+    var $this = $(this);
+    if($this.hasClass("bg")){
+        $this.removeClass("bg").find('.erji').slideToggle();
+    }else{
+        $this.addClass("bg").find('.erji').slideToggle();
+        $this.siblings().removeClass("bg").find('.erji').slideUp();
+    }
+})
+    </script>
